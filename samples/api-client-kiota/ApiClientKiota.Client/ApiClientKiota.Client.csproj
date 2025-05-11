@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <KiotaCommand>
+      <![CDATA[
+        dotnet tool run kiota generate ^
+          --language CSharp ^
+          --class-name PetstoreClient ^
+          --namespace-name Clients.Petstore ^
+          --openapi ./Resources/petstore-openapi.json ^
+          --output ./Client ^
+          --clean-output
+          ]]>
+    </KiotaCommand>
+  </PropertyGroup>
+
+  <!-- This executes on rebuilds targeting Debug -->
+  <Target Name="CreateKiotaClient" BeforeTargets="Rebuild" Condition="'$(Configuration)' == 'Debug'">
+    <!-- First we restore dotnet tools in case we don't have Kiota installed -->
+    <Exec Command="dotnet tool restore" WorkingDirectory="$(ProjectDir)" />
+    <!-- Next we execute our KiotaCommand -->
+    <Exec Command="$(KiotaCommand)" WorkingDirectory="$(ProjectDir)" ContinueOnError="true" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Kiota.Bundle" Version="1.17.2" />
+  </ItemGroup>
+
+</Project>

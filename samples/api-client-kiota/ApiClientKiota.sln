@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClientKiota.Client", "ApiClientKiota.Client\ApiClientKiota.Client.csproj", "{D1E83FDB-649C-4EE5-B242-F75B5B73F535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClientKiota.Console", "ApiClientKiota.Console\ApiClientKiota.Console.csproj", "{D41E508F-5B26-43DF-885A-04EAB23C88D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E83FDB-649C-4EE5-B242-F75B5B73F535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E83FDB-649C-4EE5-B242-F75B5B73F535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E83FDB-649C-4EE5-B242-F75B5B73F535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E83FDB-649C-4EE5-B242-F75B5B73F535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41E508F-5B26-43DF-885A-04EAB23C88D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41E508F-5B26-43DF-885A-04EAB23C88D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41E508F-5B26-43DF-885A-04EAB23C88D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41E508F-5B26-43DF-885A-04EAB23C88D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C64BBB6-21CE-4E45-A81D-8D2CE65DE646}
+	EndGlobalSection
+EndGlobal
